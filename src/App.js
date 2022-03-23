@@ -3,19 +3,19 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
+import Products from './pages/Products';
 
 
 
 
-class App extends Component {
-  render() {
+function App() {
     return (
       <Router>
         <div className="App">
           <Navbar />
           <Switch>
             <Route path="/products">
-              <h1>Product</h1>
+              <Products />
             </Route>
             <Route path="/mypage">
               <h1>My Page</h1>
@@ -31,7 +31,6 @@ class App extends Component {
       </Router>
     );
   }
-}
 
 
 export default App;
